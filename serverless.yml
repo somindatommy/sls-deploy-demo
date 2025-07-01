@@ -1,0 +1,23 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: tommysworld
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: cicd-app
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: sls-deploy-demo
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: us-east-1
+  memorySize: 128
+  timeout: 3
+
+functions:
+  hello:
+    handler: handler.logger
+    events:
+      - http:
+          path: message
+          method: get
+          cors: true
