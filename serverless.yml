@@ -5,6 +5,9 @@ app: cicd-app
 # "service" is the name of this project. This will also be added to your AWS resource names.
 service: sls-deploy-demo
 
+plugins:
+  - serverless-stage-manager
+
 provider:
   name: aws
   runtime: nodejs20.x
