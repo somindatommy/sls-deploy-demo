@@ -1,5 +1,8 @@
 version: 0.2
 
+env:
+  secrets-manager:
+    SERVERLESS_ACCESS_KEY: AK1mqOrDFE16b2DsKXRG5JYIXakxcUvtue8USANHMHEFL
 phases:
   install:
     runtime-versions:
@@ -15,7 +18,7 @@ phases:
     commands:
       - echo Deployment started on `date`
       - echo Deploying with Serverless Framework
-      - sls deploy -s dev
+      - sls deploy --org tommysworld --app cicd-app -s dev
   post_build:
     commands:
       - echo Deployment completed on `date`
