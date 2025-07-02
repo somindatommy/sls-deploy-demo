@@ -8,10 +8,16 @@ service: sls-deploy-demo
 plugins:
   - serverless-stage-manager
 
+custom:
+  stageManager:
+    stages:
+      - dev
+      - prod
+
 provider:
   name: aws
   runtime: nodejs20.x
-  stage: dev
+  #stage: dev
   region: us-east-1
   memorySize: 128
   timeout: 3
