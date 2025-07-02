@@ -9,10 +9,9 @@ plugins:
   - serverless-stage-manager
 
 custom:
-  stageManager:
-    stages:
-      - dev
-      - prod
+  stages:
+    - dev
+    - prod
 
 provider:
   name: aws
