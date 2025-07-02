@@ -1,8 +1,5 @@
 version: 0.2
 
-# env:
-#   secrets-manager:
-#     SERVERLESS_ACCESS_KEY: AK1mqOrDFE16b2DsKXRG5JYIXakxcUvtue8USANHMHEFL
 phases:
   install:
     runtime-versions:
